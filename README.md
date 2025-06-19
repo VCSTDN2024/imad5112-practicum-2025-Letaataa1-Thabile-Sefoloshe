@@ -1,4 +1,4 @@
-# [App Title]
+# [MUSIC MANAGER]
 - **Developer**: [Letaataa Thabile Sefoloshe]
 - **Student Number**: [ST10476633]
 - **Group**: [2]
