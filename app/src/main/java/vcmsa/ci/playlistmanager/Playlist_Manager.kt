@@ -2,12 +2,14 @@ package vcmsa.ci.playlistmanager
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -58,6 +60,7 @@ class Playlist_Manager : AppCompatActivity() {
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.R)
     fun displayInformation() {
 
 
@@ -67,6 +70,8 @@ class Playlist_Manager : AppCompatActivity() {
         val commentsText = findViewById<EditText>(R.id.commentsText)
         val displayText = findViewById<TextView>(R.id.displayText)
 
+        //displayText.text = display
+
         builder.setPositiveButton("Add") { dialog, _ ->
             val song = songText.text.toString().trim()
             val artist = artistText.text.toString().trim()
@@ -74,8 +79,7 @@ class Playlist_Manager : AppCompatActivity() {
             val comment = commentsText.text.toString().trim()
 
             if (song.isEmpty() || artist.isEmpty() || rating.isEmpty()) {
-                Toast.makeText(this, "song, artist, rating cannot be empty!", Toast.LENGTH_SHORT)
-                    .show()
+                Toast.makeText(this, "song, artist, rating cannot be empty!", Toast.LENGTH_SHORT).show()
             }
 
             val ratings = rating.toIntOrNull()
@@ -83,14 +87,12 @@ class Playlist_Manager : AppCompatActivity() {
                 Toast.makeText(this, "Invalid rating. Please enter a number greater then 0!", Toast.LENGTH_SHORT).show()
             }
 
-            information.add(song)
+            display.add(song)
             this.artist
             this.rating
             this.comment
 
-            Toast.makeText(this, "$informaton Added information to packing list",Toast.LENGTH_SHORT).show()
-
-
+            Toast.makeText(this, "$song added information to packing list",Toast.LENGTH_SHORT).show()
         }
     }
 }

@@ -44,7 +44,7 @@
         app:layout_constraintVertical_bias="0.926" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/TVdisplay"
         android:layout_width="392dp"
         android:layout_height="416dp"
         android:gravity="center"
