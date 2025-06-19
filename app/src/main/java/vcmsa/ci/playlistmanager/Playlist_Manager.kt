@@ -62,15 +62,17 @@ class Playlist_Manager : AppCompatActivity() {
 
     @RequiresApi(Build.VERSION_CODES.R)
     fun displayInformation() {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Add New Item")
 
-
+        val view = layoutInflater.inflate(R.layout.dialog_add_item, null)
         val songText = findViewById<EditText>(R.id.songText)
         val artistText = findViewById<EditText>(R.id.artisText)
         val ratingText = findViewById<EditText>(R.id.ratingText)
         val commentsText = findViewById<EditText>(R.id.commentsText)
         val displayText = findViewById<TextView>(R.id.displayText)
 
-        //displayText.text = display
+        builder.setView(view)
 
         builder.setPositiveButton("Add") { dialog, _ ->
             val song = songText.text.toString().trim()
@@ -79,12 +81,14 @@ class Playlist_Manager : AppCompatActivity() {
             val comment = commentsText.text.toString().trim()
 
             if (song.isEmpty() || artist.isEmpty() || rating.isEmpty()) {
-                Toast.makeText(this, "song, artist, rating cannot be empty!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Song title, Artist name and Rating cannot be empty!", Toast.LENGTH_SHORT).show()
+                return@setPositiveButton
             }
 
             val ratings = rating.toIntOrNull()
             if (rating == null || rating <= 0.toString()) {
                 Toast.makeText(this, "Invalid rating. Please enter a number greater then 0!", Toast.LENGTH_SHORT).show()
+                return@setPositiveButton
             }
 
             display.add(song)
@@ -94,5 +98,11 @@ class Playlist_Manager : AppCompatActivity() {
 
             Toast.makeText(this, "$song added information to packing list",Toast.LENGTH_SHORT).show()
         }
+
+        builder.setNegativeButton("Cancel") { dialog, _ ->
+            dialog.cancel()
+        }
+
+        builder.show()
     }
 }

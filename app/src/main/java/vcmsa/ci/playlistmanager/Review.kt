@@ -3,6 +3,7 @@ package vcmsa.ci.playlistmanager
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -46,17 +47,23 @@ class Review : AppCompatActivity() {
     fun dislayPackingList() {
 
         val stringBuilder = StringBuilder()
+        val TVdisplay = findViewById<TextView>(R.id.TVdisplay)
 
         if (song.isNotEmpty()) {
             for (i in song.indices) {
-                stringBuilder.append("song", ${song[i]}\n)
-                stringBuilder.append("artist" ${artist[i]}\n)
-                stringBuilder.append("rating" ${rating[i]}\n)
-                stringBuilder.append("comments" ${comments[i]\n})
-
-
-
+                stringBuilder.append("song ${song[i]}\n")
+                stringBuilder.append("artist ${artist[i]}\n")
+                stringBuilder.append("rating ${rating[i]}\n")
+                stringBuilder.append("comments ${comments[i]}\n")
             }
+            TVdisplay.text = stringBuilder.toString()
+        } else {
+            TVdisplay.text = "Packing list is empty"
         }
+    }
+
+    fun calculateAverage() {
+
+
     }
 }
