@@ -55,16 +55,13 @@ This project was managed using **GitHub** for version control, where all code ch
 ## Screenshots
 
 ### App Screenshots:
-![Screenshot 1]( "C:\Users\st10476633\Pictures\Screenshot 2025-06-19 145635.png")
-*Caption for screenshot 1: [Describe the context, e.g., "The home screen of the app showing the task list."]*
+![Screenshot 2025-06-19 145657](https://github.com/user-attachments/assets/6490a82d-08bf-4285-8d69-94c1372290ad)
 
-![Screenshot 2]( "C:\Users\lab_services_student\Pictures\Screenshots\Screenshot 2025-06-19 145657.png"
-"C:\Users\lab_services_student\Pictures\Screenshots\Screenshot 2025-06-19 145718.png"
-"C:\Users\lab_services_student\Pictures\Screenshots\Screenshot 2025-06-19 145635.png")
-*Caption for screenshot 2: [Describe the context, e.g., "The user profile screen where personal information is updated."]*
 
-### Video Demo:
-A video showcasing the app's functionality can be viewed here: [YouTube Video Link].
+*
+![Screenshot 2025-06-19 145718](https://github.com/user-attachments/assets/ea4573b9-2000-45f6-bcdb-0db4dbb1cde5)
+
+![Screenshot 2025-06-19 145635](https://github.com/user-attachments/assets/11db17a2-f148-4dcf-9096-00455caefd7a)
 
 ---
 
@@ -72,11 +69,9 @@ A video showcasing the app's functionality can be viewed here: [YouTube Video Li
 
 During the development of this project, I encountered several challenges, including:
 
-1. **Challenge 1**: [Briefly describe a challenge you faced, e.g., "Implementing a complex feature like the login system."]
-   - **Solution**: [How you solved the challenge, e.g., "I researched Firebase authentication and successfully integrated it into the app."]
+1. **Challenge 1**: Struggled to fix my add, for lopp {in order to store songs and detaisls}
+   - **Solution**: Just work aroound whati knew
    
-2. **Challenge 2**: [Describe another challenge, e.g., "Debugging issues related to Gradle builds."]
-   - **Solution**: [How you solved the challenge.]
 
 From these challenges, I learned important lessons in debugging, using version control, and automating build processes with GitHub Actions.
 
@@ -86,9 +81,7 @@ From these challenges, I learned important lessons in debugging, using version c
 
 While the current version of the app provides the core functionality, there are several features that could be added in the future, including:
 
-1. **Feature 1**: [Description, e.g., "Allowing users to set up reminders or notifications."]
-2. **Feature 2**: [Description, e.g., "Integrating with a cloud database for storing user data."]
-3. **Feature 3**: [Description, e.g., "Adding a dark mode option for better user experience."]
+1. **Feature 1**: Fixinf errors and updating looop for better storage
 
 ---
 
@@ -101,8 +94,12 @@ While the current version of the app provides the core functionality, there are 
 
 ## List of Figures
 
-- **Figure 1**: Screenshot of the app's home screen.
-- **Figure 2**: Screenshot of the user profile screen.
+- **Figure 1**: ![Screenshot 2025-06-19 145657](https://github.com/user-attachments/assets/8a98b929-73f8-4ddb-aa70-fd546db6310c)
+.
+- **Figure 2**: ![Screenshot 2025-06-19 145718](https://github.com/user-attachments/assets/98ba50a8-9d84-4e3a-b9ae-b257fd3059df)
+
+.- **Figure 3**: ![Screenshot 2025-06-19 145635](https://github.com/user-attachments/assets/4eb0142c-0141-46f5-86b9-f8ae8df34593)
+
 
 ---
 
@@ -126,8 +123,5 @@ In the development of this project, I have used generative AI tools to assist in
 - **Code Assistance**: GitHub Copilot was used to assist in writing specific parts of the code, such as setting up GitHub Actions and working with Gradle.
 - **Correcting Grammar and Spelling**: ChatGPT helped review and correct the grammar and clarity of my project report.
 
-### 4. **Date(s) in Which Generative AI Was Used:**
-- **Question 2.2**: AI used on **March 5, 2025** for brainstorming feature ideas.
-- **Part 5**: AI used on **March 8, 2025** to help set up GitHub Actions.
-- **Part 3**: AI used on **March 10, 2025** for reviewing the final report.
+
 
