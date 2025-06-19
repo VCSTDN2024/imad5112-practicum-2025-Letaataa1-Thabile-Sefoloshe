@@ -25,6 +25,7 @@ class Playlist_Manager : AppCompatActivity() {
     private var rating = mutableListOf<Int>()
     private var comment = mutableListOf<String>()
 
+    @RequiresApi(Build.VERSION_CODES.R)
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,14 +64,13 @@ class Playlist_Manager : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.R)
     fun displayInformation() {
         val builder = AlertDialog.Builder(this)
-        builder.setTitle("Add New Item")
+        builder.setTitle("Add New Information")
 
-        val view = layoutInflater.inflate(R.layout.dialog_add_item, null)
+        val view = layoutInflater.inflate(R.layout.add_information, null)
         val songText = findViewById<EditText>(R.id.songText)
         val artistText = findViewById<EditText>(R.id.artisText)
         val ratingText = findViewById<EditText>(R.id.ratingText)
         val commentsText = findViewById<EditText>(R.id.commentsText)
-        val displayText = findViewById<TextView>(R.id.displayText)
 
         builder.setView(view)
 
@@ -86,17 +86,18 @@ class Playlist_Manager : AppCompatActivity() {
             }
 
             val ratings = rating.toIntOrNull()
-            if (rating == null || rating <= 0.toString()) {
+            if (ratings == null || ratings <= 0) {
                 Toast.makeText(this, "Invalid rating. Please enter a number greater then 0!", Toast.LENGTH_SHORT).show()
                 return@setPositiveButton
             }
 
-            display.add(song)
-            this.artist
-            this.rating
-            this.comment
+            song.add(song)
+            this.artist.add(artist)
+            this.rating.add(ratings)
+            this.comment.add(comment)
 
             Toast.makeText(this, "$song added information to packing list",Toast.LENGTH_SHORT).show()
+            dialog.dismiss()
         }
 
         builder.setNegativeButton("Cancel") { dialog, _ ->
@@ -106,3 +107,10 @@ class Playlist_Manager : AppCompatActivity() {
         builder.show()
     }
 }
+
+private fun String.add(song: String) {
+    TODO("Not yet implemented")
+}
+
+
+

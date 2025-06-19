@@ -31,7 +31,7 @@ class Review : AppCompatActivity() {
         comments = intent.getStringArrayListExtra("comment") ?: arrayListOf()
 
         averageBtn.setOnClickListener {
-            calculateAverage()
+
         }
 
         displayBtn.setOnClickListener {
@@ -51,19 +51,15 @@ class Review : AppCompatActivity() {
 
         if (song.isNotEmpty()) {
             for (i in song.indices) {
-                stringBuilder.append("song ${song[i]}\n")
-                stringBuilder.append("artist ${artist[i]}\n")
-                stringBuilder.append("rating ${rating[i]}\n")
-                stringBuilder.append("comments ${comments[i]}\n")
+                stringBuilder.append("song: ${song[i]}\n")
+                stringBuilder.append("artist: ${artist[i]}\n")
+                stringBuilder.append("rating: ${rating[i]}\n")
+                stringBuilder.append("comments: ${comments[i]}\n\n")
+
             }
             TVdisplay.text = stringBuilder.toString()
         } else {
             TVdisplay.text = "Packing list is empty"
         }
-    }
-
-    fun calculateAverage() {
-
-
     }
 }
